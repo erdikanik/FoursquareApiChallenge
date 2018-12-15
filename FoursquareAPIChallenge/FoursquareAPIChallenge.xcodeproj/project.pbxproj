@@ -8,12 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		870AC35F21C54F96003C20BC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 870AC35E21C54F96003C20BC /* AppDelegate.m */; };
-		870AC36221C54F96003C20BC /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 870AC36121C54F96003C20BC /* ViewController.m */; };
 		870AC36521C54F96003C20BC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 870AC36321C54F96003C20BC /* Main.storyboard */; };
 		870AC36721C54F97003C20BC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 870AC36621C54F97003C20BC /* Assets.xcassets */; };
 		870AC36A21C54F97003C20BC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 870AC36821C54F97003C20BC /* LaunchScreen.storyboard */; };
 		870AC36D21C54F97003C20BC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 870AC36C21C54F97003C20BC /* main.m */; };
 		870AC37721C54F97003C20BC /* FoursquareAPIChallengeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 870AC37621C54F97003C20BC /* FoursquareAPIChallengeTests.m */; };
+		870AC38E21C56686003C20BC /* UIFont+FACAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 870AC38D21C56686003C20BC /* UIFont+FACAdditions.m */; };
+		870AC39221C5882D003C20BC /* UITextField+FACAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 870AC39121C5882D003C20BC /* UITextField+FACAdditions.m */; };
+		87F389E221C58F4100B5F397 /* UIButton+FACAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 87F389E121C58F4100B5F397 /* UIButton+FACAdditions.m */; };
+		87F389E521C5969E00B5F397 /* FACMainPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 87F389E421C5969E00B5F397 /* FACMainPageViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -30,8 +33,6 @@
 		870AC35A21C54F96003C20BC /* FoursquareAPIChallenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoursquareAPIChallenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		870AC35D21C54F96003C20BC /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		870AC35E21C54F96003C20BC /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		870AC36021C54F96003C20BC /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		870AC36121C54F96003C20BC /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		870AC36421C54F96003C20BC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		870AC36621C54F97003C20BC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		870AC36921C54F97003C20BC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -40,6 +41,15 @@
 		870AC37221C54F97003C20BC /* FoursquareAPIChallengeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FoursquareAPIChallengeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		870AC37621C54F97003C20BC /* FoursquareAPIChallengeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FoursquareAPIChallengeTests.m; sourceTree = "<group>"; };
 		870AC37821C54F97003C20BC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		870AC38C21C56686003C20BC /* UIFont+FACAdditions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIFont+FACAdditions.h"; sourceTree = "<group>"; };
+		870AC38D21C56686003C20BC /* UIFont+FACAdditions.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIFont+FACAdditions.m"; sourceTree = "<group>"; };
+		870AC38F21C5673E003C20BC /* FACPrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FACPrefixHeader.pch; sourceTree = "<group>"; };
+		870AC39021C5882D003C20BC /* UITextField+FACAdditions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UITextField+FACAdditions.h"; sourceTree = "<group>"; };
+		870AC39121C5882D003C20BC /* UITextField+FACAdditions.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UITextField+FACAdditions.m"; sourceTree = "<group>"; };
+		87F389E021C58F4100B5F397 /* UIButton+FACAdditions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIButton+FACAdditions.h"; sourceTree = "<group>"; };
+		87F389E121C58F4100B5F397 /* UIButton+FACAdditions.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIButton+FACAdditions.m"; sourceTree = "<group>"; };
+		87F389E321C5969E00B5F397 /* FACMainPageViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FACMainPageViewController.h; sourceTree = "<group>"; };
+		87F389E421C5969E00B5F397 /* FACMainPageViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FACMainPageViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +73,7 @@
 		870AC35121C54F96003C20BC = {
 			isa = PBXGroup;
 			children = (
+				870AC38F21C5673E003C20BC /* FACPrefixHeader.pch */,
 				870AC35C21C54F96003C20BC /* FoursquareAPIChallenge */,
 				870AC37521C54F97003C20BC /* FoursquareAPIChallengeTests */,
 				870AC35B21C54F96003C20BC /* Products */,
@@ -81,10 +92,12 @@
 		870AC35C21C54F96003C20BC /* FoursquareAPIChallenge */ = {
 			isa = PBXGroup;
 			children = (
+				870AC38B21C5653B003C20BC /* Extensions */,
+				870AC38921C55BB9003C20BC /* Model */,
+				870AC38221C55B3D003C20BC /* Modules */,
+				870AC38121C55B33003C20BC /* Views */,
 				870AC35D21C54F96003C20BC /* AppDelegate.h */,
 				870AC35E21C54F96003C20BC /* AppDelegate.m */,
-				870AC36021C54F96003C20BC /* ViewController.h */,
-				870AC36121C54F96003C20BC /* ViewController.m */,
 				870AC36321C54F96003C20BC /* Main.storyboard */,
 				870AC36621C54F97003C20BC /* Assets.xcassets */,
 				870AC36821C54F97003C20BC /* LaunchScreen.storyboard */,
@@ -101,6 +114,58 @@
 				870AC37821C54F97003C20BC /* Info.plist */,
 			);
 			path = FoursquareAPIChallengeTests;
+			sourceTree = "<group>";
+		};
+		870AC38121C55B33003C20BC /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		870AC38221C55B3D003C20BC /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				870AC38721C55BAB003C20BC /* Presenter */,
+				870AC38421C55B6F003C20BC /* Views */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		870AC38421C55B6F003C20BC /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				87F389E321C5969E00B5F397 /* FACMainPageViewController.h */,
+				87F389E421C5969E00B5F397 /* FACMainPageViewController.m */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		870AC38721C55BAB003C20BC /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		870AC38921C55BB9003C20BC /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		870AC38B21C5653B003C20BC /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				870AC38C21C56686003C20BC /* UIFont+FACAdditions.h */,
+				870AC38D21C56686003C20BC /* UIFont+FACAdditions.m */,
+				870AC39021C5882D003C20BC /* UITextField+FACAdditions.h */,
+				870AC39121C5882D003C20BC /* UITextField+FACAdditions.m */,
+				87F389E021C58F4100B5F397 /* UIButton+FACAdditions.h */,
+				87F389E121C58F4100B5F397 /* UIButton+FACAdditions.m */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -203,9 +268,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				870AC36221C54F96003C20BC /* ViewController.m in Sources */,
+				870AC39221C5882D003C20BC /* UITextField+FACAdditions.m in Sources */,
 				870AC36D21C54F97003C20BC /* main.m in Sources */,
 				870AC35F21C54F96003C20BC /* AppDelegate.m in Sources */,
+				87F389E521C5969E00B5F397 /* FACMainPageViewController.m in Sources */,
+				87F389E221C58F4100B5F397 /* UIButton+FACAdditions.m in Sources */,
+				870AC38E21C56686003C20BC /* UIFont+FACAdditions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -365,6 +433,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = PD29HUEAAC;
+				GCC_PREFIX_HEADER = FACPrefixHeader.pch;
 				INFOPLIST_FILE = FoursquareAPIChallenge/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -383,6 +452,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = PD29HUEAAC;
+				GCC_PREFIX_HEADER = FACPrefixHeader.pch;
 				INFOPLIST_FILE = FoursquareAPIChallenge/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = (
