@@ -14,7 +14,7 @@
  @param size size of font
  @return font object
  */
-+ (UIFont *)mainLightFontWithSize:(CGFloat)size;
++ (UIFont *)fac_mainLightFontWithSize:(CGFloat)size;
 
 /**
  Creates default regular font of application
@@ -22,7 +22,7 @@
  @param size size of font
  @return font object
  */
-+ (UIFont *)mainRegularFontWithSize:(CGFloat)size;
++ (UIFont *)fac_mainRegularFontWithSize:(CGFloat)size;
 
 /**
  Creates default semibold font of application
@@ -30,7 +30,7 @@
  @param size size of font
  @return font object
  */
-+ (UIFont *)mainSemiboldFontWithSize:(CGFloat)size;
++ (UIFont *)fac_mainSemiboldFontWithSize:(CGFloat)size;
 
 /**
  Creates default medium font of application
@@ -38,6 +38,6 @@
  @param size size of font
  @return font object
  */
-+ (UIFont *)mainMediumFontWithSize:(CGFloat)size;
++ (UIFont *)fac_mainMediumFontWithSize:(CGFloat)size;
 
 @end

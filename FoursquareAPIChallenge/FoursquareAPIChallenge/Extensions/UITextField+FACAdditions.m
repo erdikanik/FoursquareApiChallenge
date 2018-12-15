@@ -16,14 +16,14 @@ static CGFloat   kSearchBarPlaceHolderFontSize = 17.0;
 
 @implementation UITextField (FACAdditions)
 
-- (void)applySearchbarStylingWithPlaceHolderText:(NSString *)placeHolderText
+- (void)fac_applySearchbarStylingWithPlaceHolderText:(NSString *)placeHolderText
 {
     self.layer.cornerRadius = kSearchBarCornerRadius;
     UIColor *placeHolderColor = [UIColor colorWithRed:199.0 / 255.0 green:199.0 / 255.0 blue:205.0 / 255.0 alpha:1];
     
     NSDictionary *attributes = @{
                                  NSForegroundColorAttributeName : placeHolderColor,
-                                 NSFontAttributeName : [UIFont mainLightFontWithSize:kSearchBarPlaceHolderFontSize]
+                                 NSFontAttributeName : [UIFont fac_mainLightFontWithSize:kSearchBarPlaceHolderFontSize]
                                  };
     
     self.attributedPlaceholder = [[NSAttributedString alloc] initWithString:placeHolderText

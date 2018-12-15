@@ -14,10 +14,10 @@ static CGFloat kMainButtonFontSize = 17.0;
 
 @implementation UIButton (FACAdditions)
 
-- (void)applyMainButtonStyling
+- (void)fac_applyMainButtonStyling
 {
     self.layer.cornerRadius = kMainButtonCornerRadius;
-    self.titleLabel.font = [UIFont mainSemiboldFontWithSize:kMainButtonFontSize];
+    self.titleLabel.font = [UIFont fac_mainSemiboldFontWithSize:kMainButtonFontSize];
 }
 
 @end

@@ -8,6 +8,6 @@
 
 @interface UITextField (FACAdditions)
 
-- (void)applySearchbarStylingWithPlaceHolderText:(NSString *)placeHolderText;
+- (void)fac_applySearchbarStylingWithPlaceHolderText:(NSString *)placeHolderText;
 
 @end

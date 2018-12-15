@@ -15,22 +15,22 @@ static NSString *kMainSemiboldFont = @"SanFranciscoDisplay-Semibold";
 
 @implementation UIFont (FACAdditions)
 
-+ (UIFont *)mainLightFontWithSize:(CGFloat)size
++ (UIFont *)fac_mainLightFontWithSize:(CGFloat)size
 {
     return [UIFont fontWithName:kMainLightFont size:size];
 }
 
-+ (UIFont *)mainMediumFontWithSize:(CGFloat)size
++ (UIFont *)fac_mainMediumFontWithSize:(CGFloat)size
 {
     return [UIFont fontWithName:kMainMediumFont size:size];
 }
 
-+ (UIFont *)mainRegularFontWithSize:(CGFloat)size
++ (UIFont *)fac_mainRegularFontWithSize:(CGFloat)size
 {
     return [UIFont fontWithName:kMainRegularFont size:size];
 }
 
-+ (UIFont *)mainSemiboldFontWithSize:(CGFloat)size
++ (UIFont *)fac_mainSemiboldFontWithSize:(CGFloat)size
 {
     return [UIFont fontWithName:kMainSemiboldFont size:size];
 }

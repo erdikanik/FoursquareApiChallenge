@@ -8,6 +8,6 @@
 
 @interface UIButton (FACAdditions)
 
-- (void)applyMainButtonStyling;
+- (void)fac_applyMainButtonStyling;
 
 @end

@@ -32,13 +32,13 @@ static CGFloat kCountryLabelFontSize = 13.0;
 - (void)applyStyling
 {
     self.nameLabel.textColor =  [UIColor colorWithRed:70/255.0 green:46/255.0 blue:197/255.0 alpha:1/1.0];
-    self.nameLabel.font = [UIFont mainMediumFontWithSize:kNameLabelFontSize];
+    self.nameLabel.font = [UIFont fac_mainMediumFontWithSize:kNameLabelFontSize];
     
     self.adressLabel.textColor =  [UIColor blackColor];
-    self.adressLabel.font = [UIFont mainRegularFontWithSize:kAdressLabelFontSize];
+    self.adressLabel.font = [UIFont fac_mainRegularFontWithSize:kAdressLabelFontSize];
     
     self.countryLabel.textColor = [UIColor colorWithRed:184/255.0 green:184/255.0 blue:184/255.0 alpha:1/1.0];
-    self.countryLabel.font = [UIFont mainRegularFontWithSize:kCountryLabelFontSize];
+    self.countryLabel.font = [UIFont fac_mainRegularFontWithSize:kCountryLabelFontSize];
 }
 
 @end

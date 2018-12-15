@@ -17,6 +17,10 @@
 		870AC39221C5882D003C20BC /* UITextField+FACAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 870AC39121C5882D003C20BC /* UITextField+FACAdditions.m */; };
 		87F389E221C58F4100B5F397 /* UIButton+FACAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 87F389E121C58F4100B5F397 /* UIButton+FACAdditions.m */; };
 		87F389E521C5969E00B5F397 /* FACMainPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 87F389E421C5969E00B5F397 /* FACMainPageViewController.m */; };
+		87F389E721C59B2400B5F397 /* FACPlaceCellTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 87F389E621C59B2400B5F397 /* FACPlaceCellTableViewCell.xib */; };
+		87F389EA21C59F2100B5F397 /* FACPlaceCellTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 87F389E921C59F2100B5F397 /* FACPlaceCellTableViewCell.m */; };
+		87F389F221C5A5D900B5F397 /* FACPlaceView.m in Sources */ = {isa = PBXBuildFile; fileRef = 87F389F121C5A5D900B5F397 /* FACPlaceView.m */; };
+		87F389F421C5A5EA00B5F397 /* FACPlaceView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 87F389F321C5A5EA00B5F397 /* FACPlaceView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +54,12 @@
 		87F389E121C58F4100B5F397 /* UIButton+FACAdditions.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIButton+FACAdditions.m"; sourceTree = "<group>"; };
 		87F389E321C5969E00B5F397 /* FACMainPageViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FACMainPageViewController.h; sourceTree = "<group>"; };
 		87F389E421C5969E00B5F397 /* FACMainPageViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FACMainPageViewController.m; sourceTree = "<group>"; };
+		87F389E621C59B2400B5F397 /* FACPlaceCellTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FACPlaceCellTableViewCell.xib; sourceTree = "<group>"; };
+		87F389E821C59F2100B5F397 /* FACPlaceCellTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FACPlaceCellTableViewCell.h; sourceTree = "<group>"; };
+		87F389E921C59F2100B5F397 /* FACPlaceCellTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FACPlaceCellTableViewCell.m; sourceTree = "<group>"; };
+		87F389F021C5A5D900B5F397 /* FACPlaceView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FACPlaceView.h; sourceTree = "<group>"; };
+		87F389F121C5A5D900B5F397 /* FACPlaceView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FACPlaceView.m; sourceTree = "<group>"; };
+		87F389F321C5A5EA00B5F397 /* FACPlaceView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FACPlaceView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +129,8 @@
 		870AC38121C55B33003C20BC /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				87F389EC21C5A58E00B5F397 /* PlaceView */,
+				87F389EB21C59F2600B5F397 /* PlaceCell */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -166,6 +178,26 @@
 				87F389E121C58F4100B5F397 /* UIButton+FACAdditions.m */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		87F389EB21C59F2600B5F397 /* PlaceCell */ = {
+			isa = PBXGroup;
+			children = (
+				87F389E621C59B2400B5F397 /* FACPlaceCellTableViewCell.xib */,
+				87F389E821C59F2100B5F397 /* FACPlaceCellTableViewCell.h */,
+				87F389E921C59F2100B5F397 /* FACPlaceCellTableViewCell.m */,
+			);
+			path = PlaceCell;
+			sourceTree = "<group>";
+		};
+		87F389EC21C5A58E00B5F397 /* PlaceView */ = {
+			isa = PBXGroup;
+			children = (
+				87F389F021C5A5D900B5F397 /* FACPlaceView.h */,
+				87F389F121C5A5D900B5F397 /* FACPlaceView.m */,
+				87F389F321C5A5EA00B5F397 /* FACPlaceView.xib */,
+			);
+			path = PlaceView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -248,9 +280,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				87F389E721C59B2400B5F397 /* FACPlaceCellTableViewCell.xib in Resources */,
 				870AC36A21C54F97003C20BC /* LaunchScreen.storyboard in Resources */,
 				870AC36721C54F97003C20BC /* Assets.xcassets in Resources */,
 				870AC36521C54F96003C20BC /* Main.storyboard in Resources */,
+				87F389F421C5A5EA00B5F397 /* FACPlaceView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -268,8 +302,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				87F389EA21C59F2100B5F397 /* FACPlaceCellTableViewCell.m in Sources */,
 				870AC39221C5882D003C20BC /* UITextField+FACAdditions.m in Sources */,
 				870AC36D21C54F97003C20BC /* main.m in Sources */,
+				87F389F221C5A5D900B5F397 /* FACPlaceView.m in Sources */,
 				870AC35F21C54F96003C20BC /* AppDelegate.m in Sources */,
 				87F389E521C5969E00B5F397 /* FACMainPageViewController.m in Sources */,
 				87F389E221C58F4100B5F397 /* UIButton+FACAdditions.m in Sources */,
