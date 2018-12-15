@@ -1,0 +1,15 @@
+//
+//  FACPrefixHeader.pch
+//  FoursquareAPIChallenge
+//
+//  Created by Erdi on 15.12.2018.
+//  Copyright © 2018 erdikanik. All rights reserved.
+//
+
+#ifndef FACPrefixHeader_pch
+#define FACPrefixHeader_pch
+
+#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
+
+#endif /* FACPrefixHeader_pch */
