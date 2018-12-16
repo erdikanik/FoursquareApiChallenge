@@ -41,4 +41,23 @@ static CGFloat kCountryLabelFontSize = 13.0;
     self.countryLabel.font = [UIFont fac_mainRegularFontWithSize:kCountryLabelFontSize];
 }
 
+- (void)setAddress:(NSString *)address
+{
+    _address = address;
+    
+    self.adressLabel.text = address;
+}
+
+- (void)setName:(NSString *)name
+{
+    _name = name;
+    self.nameLabel.text = name;
+}
+
+- (void)setCountry:(NSString *)country
+{
+    _country = country;
+    self.countryLabel.text = country;
+}
+
 @end

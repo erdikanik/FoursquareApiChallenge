@@ -6,7 +6,17 @@
 //  Copyright © 2018 erdikanik. All rights reserved.
 //
 
+#import <MapKit/MapKit.h>
+#import <UIImageView+AFNetworking.h>
+
 #import "FACVenuesListTableViewController.h"
+#import "FACPlaceCellTableViewCell.h"
+#import "FACVenuesListFlow.h"
+#import "FACVenue.h"
+#import "FACLocation.h"
+#import "UIView+FACAdditions.h"
+#import "FACPlaceView.h"
+#import "UIViewController+FACAdditions.h"
 
 @interface FACVenuesListTableViewController ()
 
@@ -17,77 +27,60 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
+    self.title = @"Places";
     
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    self.tableView.rowHeight = UITableViewAutomaticDimension;
+    self.tableView.estimatedRowHeight = 20;
+    
+    UINib *nib = [UINib nibWithNibName:[FACPlaceCellTableViewCell fac_nibName] bundle:NSBundle.mainBundle];
+    [self.tableView registerNib: nib forCellReuseIdentifier: [FACPlaceCellTableViewCell fac_reuseIndentifier]];
+    
+    [self.tableView reloadData];
 }
 
 #pragma mark - Table view data source
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Incomplete implementation, return the number of sections
-    return 0;
-}
-
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete implementation, return the number of rows
-    return 0;
+    return self.flow.venues.count;
 }
 
-/*
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
+    FACPlaceCellTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([FACPlaceCellTableViewCell class]) forIndexPath:indexPath];
     
-    // Configure the cell...
+    FACVenue *venue = self.flow.venues[indexPath.row];
+    cell.name = venue.name;
+    
+    NSString *adress = [NSString stringWithFormat:@"%@\n%@", venue.location.address, venue.location.city];
+    cell.address = adress;
+    cell.country = venue.location.country;
     
     return cell;
 }
-*/
 
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
+#pragma mark - Table view delegate
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    self.flow.selectedVenue = self.flow.venues[indexPath.row];
+    
+    __weak __typeof__(self) weakSelf = self;
+
+    [self.flow callVenueDetailsWithCompletion:^(NSString * _Nonnull imageUrl, NSArray<NSString *> * _Nonnull tips, NSError * _Nullable error) {
+       
+        if (!error)
+        {
+            CLLocationCoordinate2D venueLocation = CLLocationCoordinate2DMake(weakSelf.flow.selectedVenue.location.lat,
+                                                                              weakSelf.flow.selectedVenue.location.lng);
+            FACPlaceView *placeView = [FACPlaceView showPlaceViewWithLocation:venueLocation tips:tips name:weakSelf.flow.selectedVenue.name];
+            [placeView.imageView setImageWithURL:[NSURL URLWithString:imageUrl]];
+        }
+        else
+        {
+            [self fac_showAlertWithMessage:error.description];
+        }
+    }];
+    
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
-*/
-
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
-}
-*/
-
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {
-}
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

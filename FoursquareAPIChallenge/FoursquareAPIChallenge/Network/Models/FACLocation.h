@@ -12,8 +12,12 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface FACLocation : MTLModel
 
-@property (copy, nonatomic) NSString *adress;
+@property (copy, nonatomic) NSString *address;
 @property (copy, nonatomic) NSString *city;
+@property (copy, nonatomic) NSString *country;
+@property (assign, nonatomic) double lat;
+@property (assign, nonatomic) double lng;
+
 
 @end
 

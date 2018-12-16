@@ -6,11 +6,13 @@
 //  Copyright © 2018 erdikanik. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+@class FACVenuesListFlow;
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface FACVenuesListTableViewController : UITableViewController
+
+@property (strong, nonatomic) FACVenuesListFlow *flow;
 
 @end
 

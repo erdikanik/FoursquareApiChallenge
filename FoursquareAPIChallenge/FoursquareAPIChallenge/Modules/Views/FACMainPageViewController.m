@@ -11,6 +11,8 @@
 #import "UIButton+FACAdditions.h"
 #import "FACVenuesListTableViewController.h"
 #import "FACMainPageFlow.h"
+#import "FACVenuesListFlow.h"
+#import "UIViewController+FACAdditions.h"
 
 static CGFloat kSubmitButtonSearchIconLeftAlign = 12.0;
 static CGFloat kSubmitButtonSearchIconWidth = 18.0;
@@ -20,6 +22,7 @@ static NSInteger kVenueTypeTextfieldMaxCharacters = 3;
 
 @property (strong, nonatomic) FACMainPageFlow *mainPageFlow;
 
+@property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
 @property (weak, nonatomic) IBOutlet UITextField *venueTypeTextField;
 @property (weak, nonatomic) IBOutlet UITextField *placeNameTextField;
 @property (weak, nonatomic) IBOutlet UIButton *submitButton;
@@ -41,6 +44,9 @@ static NSInteger kVenueTypeTextfieldMaxCharacters = 3;
 
 - (void)applyStyling
 {
+    [self.submitButton setNeedsLayout];
+    [self.submitButton layoutIfNeeded];
+    
     [self.venueTypeTextField fac_applySearchbarStylingWithPlaceHolderText:@"Exp. Cafe, Bar"];
     [self.placeNameTextField fac_applySearchbarStylingWithPlaceHolderText:@"Close to me"];
     [self.submitButton fac_applyMainButtonStyling];
@@ -49,7 +55,7 @@ static NSInteger kVenueTypeTextfieldMaxCharacters = 3;
     [self.submitButton.titleLabel setTextAlignment:NSTextAlignmentCenter];
     [self.submitButton setImageEdgeInsets:UIEdgeInsetsMake(0.0, kSubmitButtonSearchIconLeftAlign, 0.0, 0.0)];
     [self.submitButton setTitleEdgeInsets:
-     UIEdgeInsetsMake(0.0, self.submitButton.frame.size.width /2 - kSubmitButtonSearchIconWidth - kSubmitButtonSearchIconLeftAlign , 0.0, 0.0)];
+     UIEdgeInsetsMake(0.0, self.submitButton.frame.size.width / 2 - kSubmitButtonSearchIconWidth * 2 - kSubmitButtonSearchIconLeftAlign , 0.0, 0.0)];
     [self.submitButton setContentHorizontalAlignment:UIControlContentHorizontalAlignmentLeft];
 }
 
@@ -60,26 +66,27 @@ static NSInteger kVenueTypeTextfieldMaxCharacters = 3;
     
     if (self.venueTypeTextField.text.length < kVenueTypeTextfieldMaxCharacters)
     {
-        UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@""
-                                                                                 message:@"Please enter at least 3 characters" preferredStyle:UIAlertControllerStyleAlert];
-        
-        UIAlertAction *doneAction = [UIAlertAction
-                              actionWithTitle:@"DONE"
-                              style:UIAlertActionStyleDefault
-                              handler: nil];
-        
-        [alertController addAction:doneAction];
-        [self presentViewController:alertController animated:YES completion: nil];
+        [self fac_showAlertWithMessage:@"Please enter at least 3 characters"];
     } else {
         
+        __weak __typeof__(self) weakSelf = self;
         [self.mainPageFlow callVenueSearchWithVenueType:self.venueTypeTextField.text
                                               placeName:self.placeNameTextField.text
                                              completion:^(NSArray * _Nonnull venues, NSError * _Nonnull error) {
                                                  
+                                                 if (!error) {
+                                                     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:NSBundle.mainBundle];
+                                                     FACVenuesListTableViewController *viewController = (FACVenuesListTableViewController *)[storyboard instantiateViewControllerWithIdentifier:NSStringFromClass ([FACVenuesListTableViewController class])];
+                                                     viewController.flow = [[FACVenuesListFlow alloc] initWithVenuesList:venues];
+                                                     [weakSelf.navigationController pushViewController:viewController animated:YES];
+                                                 }
+                                                 else
+                                                 {
+                                                     [self fac_showAlertWithMessage:error.description];
+                                                 }
                                               }];
         
-//        UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:NSBundle.mainBundle];
-//        UIViewController *viewController = [storyboard instantiateViewControllerWithIdentifier:NSStringFromClass ([FACVenuesListTableViewController class])];
+
         
     }
 }
@@ -94,6 +101,14 @@ static NSInteger kVenueTypeTextfieldMaxCharacters = 3;
             sender.text = newStr;
         }
     }
+}
+- (IBAction)textFieldDidBeginEditing:(UITextField *)sender {
+    [self.scrollView setContentOffset:CGPointMake(0, sender.superview.frame.origin.y) animated:YES];
+
+}
+
+- (IBAction)textFieldDidEndEditing:(UITextField *)sender {
+    [self.scrollView setContentOffset:CGPointMake(0, 0) animated:YES];
 }
 
 #pragma MARK - UITextFieldDelegate

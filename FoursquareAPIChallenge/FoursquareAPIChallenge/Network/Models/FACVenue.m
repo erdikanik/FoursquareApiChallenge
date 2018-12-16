@@ -7,15 +7,24 @@
 //
 
 #import "FACVenue.h"
+#import "FACLocation.h"
 
 @implementation FACVenue
 
-+ (NSDictionary *)JSONKeyPathsByPropertyKey {
-    return @{
-             @"identifier": @"id",
-             @"name": @"name",
-             @"location": @"location"
-             };
+- (instancetype)initWithDictionary:(NSDictionary *)dictionaryValue error:(NSError *__autoreleasing *)error
+{
+    self = [super init];
+    
+    if (self)
+    {
+        _identifier = [dictionaryValue objectForKey:@"id"];
+        _name = [dictionaryValue objectForKey:@"name"];
+        
+        NSError *error;
+        _location = [[FACLocation alloc] initWithDictionary:[dictionaryValue objectForKey:@"location"] error:&error];
+    }
+    
+    return self;
 }
 
 @end

@@ -47,10 +47,12 @@ static NSString *kRequestMethod = @"GET";
                  return;
              }
              
-             NSError *error;
              if ([responseObject isKindOfClass:[NSDictionary class]]) {
-                 id<MTLModel> response = [[responseClass alloc] initWithDictionary:responseObject error:&error];
-                 completion(response, nil);
+                 dispatch_async(dispatch_get_main_queue(), ^{
+                     NSError *error;
+                    id<MTLModel> response = [[responseClass alloc] initWithDictionary:responseObject error:&error];
+                    completion(response, nil);
+                 });
              }
              else
              {

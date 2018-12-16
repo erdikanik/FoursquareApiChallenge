@@ -6,14 +6,12 @@
 //  Copyright © 2018 erdikanik. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
-
 NS_ASSUME_NONNULL_BEGIN
 
 @interface FACPlaceCellTableViewCell : UITableViewCell
 
 @property (copy, nonatomic) NSString *name;
-@property (copy, nonatomic) NSString *adress;
+@property (copy, nonatomic) NSString *address;
 @property (copy, nonatomic) NSString *country;
 
 @end
