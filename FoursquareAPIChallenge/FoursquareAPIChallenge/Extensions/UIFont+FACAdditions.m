@@ -8,10 +8,10 @@
 
 #import "UIFont+FACAdditions.h"
 
-static NSString *kMainLightFont = @".SFUIText-Light";
-static NSString *kMainMediumFont = @".SFUIText-Medium";
-static NSString *kMainRegularFont = @".SFUIText-Regular";
-static NSString *kMainSemiboldFont = @".SFUIText-Semibold";
+static NSString *kMainLightFont = @"SFProText-Light";
+static NSString *kMainMediumFont = @"SFProText-Medium";
+static NSString *kMainRegularFont = @"SFProText-Regular";
+static NSString *kMainSemiboldFont = @"SFProText-Semibold";
 
 @implementation UIFont (FACAdditions)
 
