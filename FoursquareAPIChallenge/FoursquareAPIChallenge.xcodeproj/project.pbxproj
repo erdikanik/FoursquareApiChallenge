@@ -21,6 +21,7 @@
 		87F389EA21C59F2100B5F397 /* FACPlaceCellTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 87F389E921C59F2100B5F397 /* FACPlaceCellTableViewCell.m */; };
 		87F389F221C5A5D900B5F397 /* FACPlaceView.m in Sources */ = {isa = PBXBuildFile; fileRef = 87F389F121C5A5D900B5F397 /* FACPlaceView.m */; };
 		87F389F421C5A5EA00B5F397 /* FACPlaceView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 87F389F321C5A5EA00B5F397 /* FACPlaceView.xib */; };
+		87F38A0621C6408B00B5F397 /* FACNetworkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 87F389FC21C6408B00B5F397 /* FACNetworkManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +61,10 @@
 		87F389F021C5A5D900B5F397 /* FACPlaceView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FACPlaceView.h; sourceTree = "<group>"; };
 		87F389F121C5A5D900B5F397 /* FACPlaceView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FACPlaceView.m; sourceTree = "<group>"; };
 		87F389F321C5A5EA00B5F397 /* FACPlaceView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FACPlaceView.xib; sourceTree = "<group>"; };
+		87F389FC21C6408B00B5F397 /* FACNetworkManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FACNetworkManager.m; sourceTree = "<group>"; };
+		87F389FD21C6408B00B5F397 /* FACNetworkManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FACNetworkManager.h; sourceTree = "<group>"; };
+		87F38A0121C6408B00B5F397 /* FACRequestProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FACRequestProtocol.h; sourceTree = "<group>"; };
+		87F38A0521C6408B00B5F397 /* FACResponseProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FACResponseProtocol.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +107,7 @@
 		870AC35C21C54F96003C20BC /* FoursquareAPIChallenge */ = {
 			isa = PBXGroup;
 			children = (
+				87F389FA21C6408B00B5F397 /* Network */,
 				870AC38B21C5653B003C20BC /* Extensions */,
 				870AC38921C55BB9003C20BC /* Model */,
 				870AC38221C55B3D003C20BC /* Modules */,
@@ -198,6 +204,41 @@
 				87F389F321C5A5EA00B5F397 /* FACPlaceView.xib */,
 			);
 			path = PlaceView;
+			sourceTree = "<group>";
+		};
+		87F389FA21C6408B00B5F397 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				87F38A0121C6408B00B5F397 /* FACRequestProtocol.h */,
+				87F38A0521C6408B00B5F397 /* FACResponseProtocol.h */,
+				87F389FB21C6408B00B5F397 /* NetworkManager */,
+				87F389FE21C6408B00B5F397 /* Response */,
+				87F38A0221C6408B00B5F397 /* Request */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		87F389FB21C6408B00B5F397 /* NetworkManager */ = {
+			isa = PBXGroup;
+			children = (
+				87F389FC21C6408B00B5F397 /* FACNetworkManager.m */,
+				87F389FD21C6408B00B5F397 /* FACNetworkManager.h */,
+			);
+			path = NetworkManager;
+			sourceTree = "<group>";
+		};
+		87F389FE21C6408B00B5F397 /* Response */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Response;
+			sourceTree = "<group>";
+		};
+		87F38A0221C6408B00B5F397 /* Request */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Request;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -304,6 +345,7 @@
 			files = (
 				87F389EA21C59F2100B5F397 /* FACPlaceCellTableViewCell.m in Sources */,
 				870AC39221C5882D003C20BC /* UITextField+FACAdditions.m in Sources */,
+				87F38A0621C6408B00B5F397 /* FACNetworkManager.m in Sources */,
 				870AC36D21C54F97003C20BC /* main.m in Sources */,
 				87F389F221C5A5D900B5F397 /* FACPlaceView.m in Sources */,
 				870AC35F21C54F96003C20BC /* AppDelegate.m in Sources */,
