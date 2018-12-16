@@ -31,6 +31,8 @@
 		87A4A1E021C6FD530095B00C /* SF-Pro-Text-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 87A4A1DD21C6F96A0095B00C /* SF-Pro-Text-Medium.otf */; };
 		87A4A1E121C6FD530095B00C /* SF-Pro-Text-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 87A4A1D421C6F9690095B00C /* SF-Pro-Text-Regular.otf */; };
 		87A4A1E221C6FD530095B00C /* SF-Pro-Text-Semibold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 87A4A1D721C6F9690095B00C /* SF-Pro-Text-Semibold.otf */; };
+		87B6F5A821C70C660064EE14 /* FACLoadingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 87B6F5A721C70C660064EE14 /* FACLoadingView.m */; };
+		87B6F5AA21C70C810064EE14 /* FACLoadingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 87B6F5A921C70C810064EE14 /* FACLoadingView.xib */; };
 		87F389E221C58F4100B5F397 /* UIButton+FACAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 87F389E121C58F4100B5F397 /* UIButton+FACAdditions.m */; };
 		87F389E521C5969E00B5F397 /* FACMainPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 87F389E421C5969E00B5F397 /* FACMainPageViewController.m */; };
 		87F389E721C59B2400B5F397 /* FACPlaceCellTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 87F389E621C59B2400B5F397 /* FACPlaceCellTableViewCell.xib */; };
@@ -98,6 +100,9 @@
 		87A4A1D821C6F9690095B00C /* SF-Pro-Text-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Text-Light.otf"; sourceTree = "<group>"; };
 		87A4A1DB21C6F9690095B00C /* SF-Pro-Text-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Text-Bold.otf"; sourceTree = "<group>"; };
 		87A4A1DD21C6F96A0095B00C /* SF-Pro-Text-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Text-Medium.otf"; sourceTree = "<group>"; };
+		87B6F5A621C70C660064EE14 /* FACLoadingView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FACLoadingView.h; sourceTree = "<group>"; };
+		87B6F5A721C70C660064EE14 /* FACLoadingView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FACLoadingView.m; sourceTree = "<group>"; };
+		87B6F5A921C70C810064EE14 /* FACLoadingView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FACLoadingView.xib; sourceTree = "<group>"; };
 		87F389E021C58F4100B5F397 /* UIButton+FACAdditions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIButton+FACAdditions.h"; sourceTree = "<group>"; };
 		87F389E121C58F4100B5F397 /* UIButton+FACAdditions.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIButton+FACAdditions.m"; sourceTree = "<group>"; };
 		87F389E321C5969E00B5F397 /* FACMainPageViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FACMainPageViewController.h; sourceTree = "<group>"; };
@@ -205,6 +210,7 @@
 		870AC38121C55B33003C20BC /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				87B6F5A521C70C470064EE14 /* LoadingView */,
 				87F389EC21C5A58E00B5F397 /* PlaceView */,
 				87F389EB21C59F2600B5F397 /* PlaceCell */,
 			);
@@ -276,6 +282,16 @@
 				87A4A1D721C6F9690095B00C /* SF-Pro-Text-Semibold.otf */,
 			);
 			path = Fonts;
+			sourceTree = "<group>";
+		};
+		87B6F5A521C70C470064EE14 /* LoadingView */ = {
+			isa = PBXGroup;
+			children = (
+				87B6F5A621C70C660064EE14 /* FACLoadingView.h */,
+				87B6F5A721C70C660064EE14 /* FACLoadingView.m */,
+				87B6F5A921C70C810064EE14 /* FACLoadingView.xib */,
+			);
+			path = LoadingView;
 			sourceTree = "<group>";
 		};
 		87F389EB21C59F2600B5F397 /* PlaceCell */ = {
@@ -455,6 +471,7 @@
 				87A4A1DF21C6FD530095B00C /* SF-Pro-Text-Light.otf in Resources */,
 				87A4A1E021C6FD530095B00C /* SF-Pro-Text-Medium.otf in Resources */,
 				87A4A1E121C6FD530095B00C /* SF-Pro-Text-Regular.otf in Resources */,
+				87B6F5AA21C70C810064EE14 /* FACLoadingView.xib in Resources */,
 				87A4A1E221C6FD530095B00C /* SF-Pro-Text-Semibold.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -529,6 +546,7 @@
 				87A4A1CA21C6BB260095B00C /* FACDetailsVenueRequest.m in Sources */,
 				87A4A1BE21C6758F0095B00C /* FACLocation.m in Sources */,
 				87F389E521C5969E00B5F397 /* FACMainPageViewController.m in Sources */,
+				87B6F5A821C70C660064EE14 /* FACLoadingView.m in Sources */,
 				87F389E221C58F4100B5F397 /* UIButton+FACAdditions.m in Sources */,
 				87F38A0B21C6449600B5F397 /* FACSearchVenuesRequest.m in Sources */,
 				87A4A1C721C6B18F0095B00C /* FACDetailsVenueResponse.m in Sources */,

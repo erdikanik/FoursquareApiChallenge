@@ -13,6 +13,7 @@
 #import "FACMainPageFlow.h"
 #import "FACVenuesListFlow.h"
 #import "UIViewController+FACAdditions.h"
+#import "FACLoadingView.h"
 
 static CGFloat kSubmitButtonSearchIconLeftAlign = 12.0;
 static CGFloat kSubmitButtonSearchIconWidth = 18.0;
@@ -69,10 +70,13 @@ static NSInteger kVenueTypeTextfieldMaxCharacters = 3;
         [self fac_showAlertWithMessage:@"Please enter at least 3 characters"];
     } else {
         
+        [FACLoadingView show];
+        
         __weak __typeof__(self) weakSelf = self;
         [self.mainPageFlow callVenueSearchWithVenueType:self.venueTypeTextField.text
                                               placeName:self.placeNameTextField.text
                                              completion:^(NSArray * _Nonnull venues, NSError * _Nonnull error) {
+                                                 [FACLoadingView hide];
                                                  
                                                  if (!error) {
                                                      UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:NSBundle.mainBundle];

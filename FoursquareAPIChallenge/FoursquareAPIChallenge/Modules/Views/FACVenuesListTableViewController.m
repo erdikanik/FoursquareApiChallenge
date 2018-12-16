@@ -17,6 +17,7 @@
 #import "UIView+FACAdditions.h"
 #import "FACPlaceView.h"
 #import "UIViewController+FACAdditions.h"
+#import "FACLoadingView.h"
 
 @interface FACVenuesListTableViewController ()
 
@@ -62,11 +63,12 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     self.flow.selectedVenue = self.flow.venues[indexPath.row];
-    
+
+    [FACLoadingView show];
     __weak __typeof__(self) weakSelf = self;
 
     [self.flow callVenueDetailsWithCompletion:^(NSString * _Nonnull imageUrl, NSArray<NSString *> * _Nonnull tips, NSError * _Nullable error) {
-       
+       [FACLoadingView hide];
         if (!error)
         {
             CLLocationCoordinate2D venueLocation = CLLocationCoordinate2DMake(weakSelf.flow.selectedVenue.location.lat,
