@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0CCF49047E174FE18D403D26 /* libPods-FoursquareAPIChallenge.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B574AA08E2A8BAABC4C75931 /* libPods-FoursquareAPIChallenge.a */; };
 		870AC35F21C54F96003C20BC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 870AC35E21C54F96003C20BC /* AppDelegate.m */; };
 		870AC36521C54F96003C20BC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 870AC36321C54F96003C20BC /* Main.storyboard */; };
 		870AC36721C54F97003C20BC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 870AC36621C54F97003C20BC /* Assets.xcassets */; };
@@ -15,6 +16,11 @@
 		870AC37721C54F97003C20BC /* FoursquareAPIChallengeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 870AC37621C54F97003C20BC /* FoursquareAPIChallengeTests.m */; };
 		870AC38E21C56686003C20BC /* UIFont+FACAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 870AC38D21C56686003C20BC /* UIFont+FACAdditions.m */; };
 		870AC39221C5882D003C20BC /* UITextField+FACAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 870AC39121C5882D003C20BC /* UITextField+FACAdditions.m */; };
+		87A4A1B121C65DB40095B00C /* FACVenuesListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 87A4A1B021C65DB40095B00C /* FACVenuesListTableViewController.m */; };
+		87A4A1B421C66BF00095B00C /* FACBaseRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 87A4A1B321C66BF00095B00C /* FACBaseRequest.m */; };
+		87A4A1B721C674C00095B00C /* FACSearchVenuesResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 87A4A1B621C674C00095B00C /* FACSearchVenuesResponse.m */; };
+		87A4A1BB21C675460095B00C /* FACVenue.m in Sources */ = {isa = PBXBuildFile; fileRef = 87A4A1BA21C675460095B00C /* FACVenue.m */; };
+		87A4A1BE21C6758F0095B00C /* FACLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = 87A4A1BD21C6758F0095B00C /* FACLocation.m */; };
 		87F389E221C58F4100B5F397 /* UIButton+FACAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 87F389E121C58F4100B5F397 /* UIButton+FACAdditions.m */; };
 		87F389E521C5969E00B5F397 /* FACMainPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 87F389E421C5969E00B5F397 /* FACMainPageViewController.m */; };
 		87F389E721C59B2400B5F397 /* FACPlaceCellTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 87F389E621C59B2400B5F397 /* FACPlaceCellTableViewCell.xib */; };
@@ -22,6 +28,9 @@
 		87F389F221C5A5D900B5F397 /* FACPlaceView.m in Sources */ = {isa = PBXBuildFile; fileRef = 87F389F121C5A5D900B5F397 /* FACPlaceView.m */; };
 		87F389F421C5A5EA00B5F397 /* FACPlaceView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 87F389F321C5A5EA00B5F397 /* FACPlaceView.xib */; };
 		87F38A0621C6408B00B5F397 /* FACNetworkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 87F389FC21C6408B00B5F397 /* FACNetworkManager.m */; };
+		87F38A0B21C6449600B5F397 /* FACSearchVenuesRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 87F38A0A21C6449600B5F397 /* FACSearchVenuesRequest.m */; };
+		87F38A0F21C649C000B5F397 /* FACMainPageFlow.m in Sources */ = {isa = PBXBuildFile; fileRef = 87F38A0E21C649C000B5F397 /* FACMainPageFlow.m */; };
+		F62B90850368D783A9048FD0 /* libPods-FoursquareAPIChallengeTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 503490AC2143E287DB033DCE /* libPods-FoursquareAPIChallengeTests.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +44,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		503490AC2143E287DB033DCE /* libPods-FoursquareAPIChallengeTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-FoursquareAPIChallengeTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		598A36BBB5E04E4C43A7E585 /* Pods-FoursquareAPIChallengeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FoursquareAPIChallengeTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FoursquareAPIChallengeTests/Pods-FoursquareAPIChallengeTests.debug.xcconfig"; sourceTree = "<group>"; };
+		7C4682D1B925AC33A2EFC2E4 /* Pods-FoursquareAPIChallenge.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FoursquareAPIChallenge.release.xcconfig"; path = "Pods/Target Support Files/Pods-FoursquareAPIChallenge/Pods-FoursquareAPIChallenge.release.xcconfig"; sourceTree = "<group>"; };
 		870AC35A21C54F96003C20BC /* FoursquareAPIChallenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoursquareAPIChallenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		870AC35D21C54F96003C20BC /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		870AC35E21C54F96003C20BC /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -51,6 +63,16 @@
 		870AC38F21C5673E003C20BC /* FACPrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FACPrefixHeader.pch; sourceTree = "<group>"; };
 		870AC39021C5882D003C20BC /* UITextField+FACAdditions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UITextField+FACAdditions.h"; sourceTree = "<group>"; };
 		870AC39121C5882D003C20BC /* UITextField+FACAdditions.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UITextField+FACAdditions.m"; sourceTree = "<group>"; };
+		87A4A1AF21C65DB40095B00C /* FACVenuesListTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FACVenuesListTableViewController.h; sourceTree = "<group>"; };
+		87A4A1B021C65DB40095B00C /* FACVenuesListTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FACVenuesListTableViewController.m; sourceTree = "<group>"; };
+		87A4A1B221C66BF00095B00C /* FACBaseRequest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FACBaseRequest.h; sourceTree = "<group>"; };
+		87A4A1B321C66BF00095B00C /* FACBaseRequest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FACBaseRequest.m; sourceTree = "<group>"; };
+		87A4A1B521C674C00095B00C /* FACSearchVenuesResponse.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FACSearchVenuesResponse.h; sourceTree = "<group>"; };
+		87A4A1B621C674C00095B00C /* FACSearchVenuesResponse.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FACSearchVenuesResponse.m; sourceTree = "<group>"; };
+		87A4A1B921C675460095B00C /* FACVenue.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FACVenue.h; sourceTree = "<group>"; };
+		87A4A1BA21C675460095B00C /* FACVenue.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FACVenue.m; sourceTree = "<group>"; };
+		87A4A1BC21C6758F0095B00C /* FACLocation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FACLocation.h; sourceTree = "<group>"; };
+		87A4A1BD21C6758F0095B00C /* FACLocation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FACLocation.m; sourceTree = "<group>"; };
 		87F389E021C58F4100B5F397 /* UIButton+FACAdditions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIButton+FACAdditions.h"; sourceTree = "<group>"; };
 		87F389E121C58F4100B5F397 /* UIButton+FACAdditions.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIButton+FACAdditions.m"; sourceTree = "<group>"; };
 		87F389E321C5969E00B5F397 /* FACMainPageViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FACMainPageViewController.h; sourceTree = "<group>"; };
@@ -65,6 +87,13 @@
 		87F389FD21C6408B00B5F397 /* FACNetworkManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FACNetworkManager.h; sourceTree = "<group>"; };
 		87F38A0121C6408B00B5F397 /* FACRequestProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FACRequestProtocol.h; sourceTree = "<group>"; };
 		87F38A0521C6408B00B5F397 /* FACResponseProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FACResponseProtocol.h; sourceTree = "<group>"; };
+		87F38A0921C6449600B5F397 /* FACSearchVenuesRequest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FACSearchVenuesRequest.h; sourceTree = "<group>"; };
+		87F38A0A21C6449600B5F397 /* FACSearchVenuesRequest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FACSearchVenuesRequest.m; sourceTree = "<group>"; };
+		87F38A0D21C649C000B5F397 /* FACMainPageFlow.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FACMainPageFlow.h; sourceTree = "<group>"; };
+		87F38A0E21C649C000B5F397 /* FACMainPageFlow.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FACMainPageFlow.m; sourceTree = "<group>"; };
+		A28364F0360E079AC8593885 /* Pods-FoursquareAPIChallengeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FoursquareAPIChallengeTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-FoursquareAPIChallengeTests/Pods-FoursquareAPIChallengeTests.release.xcconfig"; sourceTree = "<group>"; };
+		B574AA08E2A8BAABC4C75931 /* libPods-FoursquareAPIChallenge.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-FoursquareAPIChallenge.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E1E309D50E7942C6D918F86F /* Pods-FoursquareAPIChallenge.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FoursquareAPIChallenge.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FoursquareAPIChallenge/Pods-FoursquareAPIChallenge.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +101,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0CCF49047E174FE18D403D26 /* libPods-FoursquareAPIChallenge.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -79,12 +109,24 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F62B90850368D783A9048FD0 /* libPods-FoursquareAPIChallengeTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5B99F41859B18F165035F5A8 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E1E309D50E7942C6D918F86F /* Pods-FoursquareAPIChallenge.debug.xcconfig */,
+				7C4682D1B925AC33A2EFC2E4 /* Pods-FoursquareAPIChallenge.release.xcconfig */,
+				598A36BBB5E04E4C43A7E585 /* Pods-FoursquareAPIChallengeTests.debug.xcconfig */,
+				A28364F0360E079AC8593885 /* Pods-FoursquareAPIChallengeTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		870AC35121C54F96003C20BC = {
 			isa = PBXGroup;
 			children = (
@@ -92,6 +134,8 @@
 				870AC35C21C54F96003C20BC /* FoursquareAPIChallenge */,
 				870AC37521C54F97003C20BC /* FoursquareAPIChallengeTests */,
 				870AC35B21C54F96003C20BC /* Products */,
+				5B99F41859B18F165035F5A8 /* Pods */,
+				D58DC8D3F6DA9D8E244E3E8B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -144,7 +188,7 @@
 		870AC38221C55B3D003C20BC /* Modules */ = {
 			isa = PBXGroup;
 			children = (
-				870AC38721C55BAB003C20BC /* Presenter */,
+				87F38A0C21C6486700B5F397 /* Logic Flows */,
 				870AC38421C55B6F003C20BC /* Views */,
 			);
 			path = Modules;
@@ -155,15 +199,10 @@
 			children = (
 				87F389E321C5969E00B5F397 /* FACMainPageViewController.h */,
 				87F389E421C5969E00B5F397 /* FACMainPageViewController.m */,
+				87A4A1AF21C65DB40095B00C /* FACVenuesListTableViewController.h */,
+				87A4A1B021C65DB40095B00C /* FACVenuesListTableViewController.m */,
 			);
 			path = Views;
-			sourceTree = "<group>";
-		};
-		870AC38721C55BAB003C20BC /* Presenter */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Presenter;
 			sourceTree = "<group>";
 		};
 		870AC38921C55BB9003C20BC /* Model */ = {
@@ -184,6 +223,17 @@
 				87F389E121C58F4100B5F397 /* UIButton+FACAdditions.m */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		87A4A1B821C675340095B00C /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				87A4A1B921C675460095B00C /* FACVenue.h */,
+				87A4A1BA21C675460095B00C /* FACVenue.m */,
+				87A4A1BC21C6758F0095B00C /* FACLocation.h */,
+				87A4A1BD21C6758F0095B00C /* FACLocation.m */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		87F389EB21C59F2600B5F397 /* PlaceCell */ = {
@@ -210,6 +260,7 @@
 			isa = PBXGroup;
 			children = (
 				87F38A0121C6408B00B5F397 /* FACRequestProtocol.h */,
+				87A4A1B821C675340095B00C /* Models */,
 				87F38A0521C6408B00B5F397 /* FACResponseProtocol.h */,
 				87F389FB21C6408B00B5F397 /* NetworkManager */,
 				87F389FE21C6408B00B5F397 /* Response */,
@@ -230,6 +281,8 @@
 		87F389FE21C6408B00B5F397 /* Response */ = {
 			isa = PBXGroup;
 			children = (
+				87A4A1B521C674C00095B00C /* FACSearchVenuesResponse.h */,
+				87A4A1B621C674C00095B00C /* FACSearchVenuesResponse.m */,
 			);
 			path = Response;
 			sourceTree = "<group>";
@@ -237,8 +290,30 @@
 		87F38A0221C6408B00B5F397 /* Request */ = {
 			isa = PBXGroup;
 			children = (
+				87F38A0921C6449600B5F397 /* FACSearchVenuesRequest.h */,
+				87F38A0A21C6449600B5F397 /* FACSearchVenuesRequest.m */,
+				87A4A1B221C66BF00095B00C /* FACBaseRequest.h */,
+				87A4A1B321C66BF00095B00C /* FACBaseRequest.m */,
 			);
 			path = Request;
+			sourceTree = "<group>";
+		};
+		87F38A0C21C6486700B5F397 /* Logic Flows */ = {
+			isa = PBXGroup;
+			children = (
+				87F38A0D21C649C000B5F397 /* FACMainPageFlow.h */,
+				87F38A0E21C649C000B5F397 /* FACMainPageFlow.m */,
+			);
+			path = "Logic Flows";
+			sourceTree = "<group>";
+		};
+		D58DC8D3F6DA9D8E244E3E8B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B574AA08E2A8BAABC4C75931 /* libPods-FoursquareAPIChallenge.a */,
+				503490AC2143E287DB033DCE /* libPods-FoursquareAPIChallengeTests.a */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -248,6 +323,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 870AC37B21C54F97003C20BC /* Build configuration list for PBXNativeTarget "FoursquareAPIChallenge" */;
 			buildPhases = (
+				7E16270C818BAB20369776EA /* [CP] Check Pods Manifest.lock */,
 				870AC35621C54F96003C20BC /* Sources */,
 				870AC35721C54F96003C20BC /* Frameworks */,
 				870AC35821C54F96003C20BC /* Resources */,
@@ -265,6 +341,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 870AC37E21C54F97003C20BC /* Build configuration list for PBXNativeTarget "FoursquareAPIChallengeTests" */;
 			buildPhases = (
+				798C8A25D5723BEB233C02AE /* [CP] Check Pods Manifest.lock */,
 				870AC36E21C54F97003C20BC /* Sources */,
 				870AC36F21C54F97003C20BC /* Frameworks */,
 				870AC37021C54F97003C20BC /* Resources */,
@@ -338,19 +415,65 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		798C8A25D5723BEB233C02AE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FoursquareAPIChallengeTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7E16270C818BAB20369776EA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FoursquareAPIChallenge-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		870AC35621C54F96003C20BC /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				87A4A1B121C65DB40095B00C /* FACVenuesListTableViewController.m in Sources */,
 				87F389EA21C59F2100B5F397 /* FACPlaceCellTableViewCell.m in Sources */,
 				870AC39221C5882D003C20BC /* UITextField+FACAdditions.m in Sources */,
+				87A4A1BB21C675460095B00C /* FACVenue.m in Sources */,
 				87F38A0621C6408B00B5F397 /* FACNetworkManager.m in Sources */,
+				87A4A1B421C66BF00095B00C /* FACBaseRequest.m in Sources */,
+				87F38A0F21C649C000B5F397 /* FACMainPageFlow.m in Sources */,
 				870AC36D21C54F97003C20BC /* main.m in Sources */,
 				87F389F221C5A5D900B5F397 /* FACPlaceView.m in Sources */,
 				870AC35F21C54F96003C20BC /* AppDelegate.m in Sources */,
+				87A4A1B721C674C00095B00C /* FACSearchVenuesResponse.m in Sources */,
+				87A4A1BE21C6758F0095B00C /* FACLocation.m in Sources */,
 				87F389E521C5969E00B5F397 /* FACMainPageViewController.m in Sources */,
 				87F389E221C58F4100B5F397 /* UIButton+FACAdditions.m in Sources */,
+				87F38A0B21C6449600B5F397 /* FACSearchVenuesRequest.m in Sources */,
 				870AC38E21C56686003C20BC /* UIFont+FACAdditions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -507,6 +630,7 @@
 		};
 		870AC37C21C54F97003C20BC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E1E309D50E7942C6D918F86F /* Pods-FoursquareAPIChallenge.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -526,6 +650,7 @@
 		};
 		870AC37D21C54F97003C20BC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7C4682D1B925AC33A2EFC2E4 /* Pods-FoursquareAPIChallenge.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -545,6 +670,7 @@
 		};
 		870AC37F21C54F97003C20BC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 598A36BBB5E04E4C43A7E585 /* Pods-FoursquareAPIChallengeTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -564,6 +690,7 @@
 		};
 		870AC38021C54F97003C20BC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A28364F0360E079AC8593885 /* Pods-FoursquareAPIChallengeTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;

@@ -47,13 +47,20 @@
                                         </constraints>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" textContentType="name"/>
+                                        <connections>
+                                            <action selector="textFieldEditingChanged:" destination="R1h-Ip-Emg" eventType="editingChanged" id="HHy-Za-fKN"/>
+                                            <outlet property="delegate" destination="R1h-Ip-Emg" id="fMk-9v-Tg3"/>
+                                        </connections>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uO8-fW-cvH">
                                         <rect key="frame" x="25" y="209" width="325" height="42"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" textContentType="name"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="R1h-Ip-Emg" id="A1Z-Xi-O5k"/>
+                                        </connections>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8rO-Qs-NQ0">
                                         <rect key="frame" x="25" y="267" width="325" height="42"/>
@@ -61,8 +68,6 @@
                                         <constraints>
                                             <constraint firstAttribute="height" constant="42" id="dbR-9L-WhT"/>
                                         </constraints>
-                                        <inset key="contentEdgeInsets" minX="12" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                        <inset key="imageEdgeInsets" minX="5" minY="0.0" maxX="0.0" maxY="0.0"/>
                                         <state key="normal" image="Search Icon"/>
                                         <connections>
                                             <action selector="mainButtonTapped:" destination="R1h-Ip-Emg" eventType="touchUpInside" id="GVV-5q-Xnh"/>
@@ -97,15 +102,20 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="KaP-WR-UB0"/>
+                    <connections>
+                        <outlet property="placeNameTextField" destination="uO8-fW-cvH" id="YCD-eb-F9v"/>
+                        <outlet property="submitButton" destination="8rO-Qs-NQ0" id="GS0-ts-j2g"/>
+                        <outlet property="venueTypeTextField" destination="HqL-yS-ztp" id="vbg-2b-1mz"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wVm-S1-4pL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="289" y="-45"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Venues List Table View Controller-->
         <scene sceneID="A9m-Gx-lcD">
             <objects>
-                <tableViewController id="fwy-nq-q9M" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="FACVenuesListTableViewController" id="fwy-nq-q9M" customClass="FACVenuesListTableViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="eUE-km-5hd">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

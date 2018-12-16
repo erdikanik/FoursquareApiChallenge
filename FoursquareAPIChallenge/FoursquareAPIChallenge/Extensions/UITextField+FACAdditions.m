@@ -9,8 +9,6 @@
 #import "UITextField+FACAdditions.h"
 #import "UIFont+FACAdditions.h"
 
-static NSString *kMainSemiboldFont = @"SanFranciscoDisplay-Semibold";
-
 static CGFloat   kSearchBarCornerRadius = 6.0;
 static CGFloat   kSearchBarPlaceHolderFontSize = 17.0;
 
@@ -28,6 +26,7 @@ static CGFloat   kSearchBarPlaceHolderFontSize = 17.0;
     
     self.attributedPlaceholder = [[NSAttributedString alloc] initWithString:placeHolderText
                                                                  attributes:attributes];
+    [self setReturnKeyType:UIReturnKeyDone];
 }
 
 @end

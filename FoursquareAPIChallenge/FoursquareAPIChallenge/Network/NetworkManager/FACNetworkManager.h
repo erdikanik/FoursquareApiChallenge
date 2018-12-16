@@ -6,8 +6,7 @@
 //  Copyright © 2018 erdikanik. All rights reserved.
 //
 
-@protocol FACRequestProtocol;
-@protocol FACResponseProtocol;
+#import "FACBaseRequest.h"
 
 @interface FACNetworkManager : NSObject
 
@@ -25,8 +24,8 @@
  @param responseClass Class of response object
  @param completion Completion block
  */
-- (void)connectWithGETMethod:(id<FACRequestProtocol>)request
+- (void)connectWithGETMethod:(id <MTLModel, FACRequestProtocol>)request
                responseClass:(Class)responseClass
-                  completion:(void(^)(id<FACResponseProtocol>, NSError *))completion;
+                  completion:(void(^)(id<MTLModel>, NSError *))completion;
 
 @end

@@ -6,11 +6,11 @@
 //  Copyright © 2018 erdikanik. All rights reserved.
 //
 
+#import <AFNetworking.h>
 #import "FACNetworkManager.h"
-#import "FACRequestProtocol.h"
-#import "FACResponseProtocol.h"
+#import "FACBaseRequest.h"
 
-static NSString *kAppUrl = @"https://s3-eu-west-1.amazonaws.com/developer-application-test";
+static NSString *kAppUrl = @"https://api.foursquare.com/v2/venues";
 static NSString *kRequestMethod = @"GET";
 
 @interface FACNetworkManager()<NSURLSessionDelegate>
@@ -31,34 +31,35 @@ static NSString *kRequestMethod = @"GET";
     return sharedManager;
 }
 
-- (void)connectWithGETMethod:(id<FACRequestProtocol>)request
+- (void)connectWithGETMethod:(id <MTLModel, FACRequestProtocol>)request
                responseClass:(Class)responseClass
-                  completion:(void(^)(id<FACResponseProtocol>, NSError *))completion
+                  completion:(void(^)(id<MTLModel>, NSError *))completion
 {
-    NSURL *url = [NSURL URLWithString:[kAppUrl stringByAppendingString:request.requestUrl]];
-    NSMutableURLRequest *urlRequest = [NSMutableURLRequest requestWithURL:url];
-
-    [urlRequest setHTTPMethod:kRequestMethod];
-    [urlRequest setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
-    [urlRequest setValue:@"application/json" forHTTPHeaderField:@"Accept"];
-
-    NSURLSessionConfiguration *configuration = [NSURLSessionConfiguration defaultSessionConfiguration];
-
-    NSURLSession *session = [NSURLSession sessionWithConfiguration:configuration delegate:self delegateQueue:[NSOperationQueue mainQueue]];
-    self.dataTask = [session dataTaskWithRequest: urlRequest
-                               completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable urlResponse, NSError * _Nullable error) {
-
-        if (completion != nil)
-        {
-            id<FACResponseProtocol> response = [[responseClass alloc] init];
-
-            NSError *error;
-            NSDictionary *dictionary = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&error];
-            [response loadObjectDictionary:dictionary];
-            completion(response, error);
-        }
+    
+    AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
+    manager.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"application/json", @"text/json", @"text/javascript",@"text/html", nil];
+    [manager GET:[kAppUrl stringByAppendingString:request.requestUrl] parameters:[request dictionaryValue]
+        progress:nil
+         success:^(NSURLSessionTask *task, id responseObject) {
+            
+             if (!completion)
+             {
+                 return;
+             }
+             
+             NSError *error;
+             if ([responseObject isKindOfClass:[NSDictionary class]]) {
+                 id<MTLModel> response = [[responseClass alloc] initWithDictionary:responseObject error:&error];
+                 completion(response, nil);
+             }
+             else
+             {
+                 completion(nil, [NSError new]);
+             }
+             
+    } failure:^(NSURLSessionTask *operation, NSError *error) {
+        completion(nil, error);
     }];
-    [self.dataTask resume];
 }
 
 @end
