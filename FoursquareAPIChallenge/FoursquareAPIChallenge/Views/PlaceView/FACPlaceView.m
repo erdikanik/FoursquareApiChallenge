@@ -13,7 +13,7 @@
 
 static CGFloat kContainerViewCornerRadius = 12.0;
 
-@interface FACPlaceView()
+@interface FACPlaceView() <UIGestureRecognizerDelegate>
 
 @property (weak, nonatomic) IBOutlet UIView *containerView;
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
@@ -71,6 +71,17 @@ static CGFloat kContainerViewCornerRadius = 12.0;
     placeView.nameViewLabel.text = name;
     
     return placeView;
+}
+
+- (IBAction)placeViewTapped:(id)sender {
+    [self removeFromSuperview];
+}
+
+#pragma mark - UIGestureRecognizerDelegate
+
+- (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldReceiveTouch:(UITouch *)touch
+{
+    return touch.view == gestureRecognizer.view;
 }
 
 @end

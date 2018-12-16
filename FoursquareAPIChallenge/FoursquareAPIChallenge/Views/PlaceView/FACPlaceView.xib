@@ -131,6 +131,7 @@
                 </view>
             </subviews>
             <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.65962114726027399" colorSpace="calibratedRGB"/>
+            <gestureRecognizers/>
             <constraints>
                 <constraint firstItem="JFe-uY-MfW" firstAttribute="centerX" secondItem="HPz-ji-4X9" secondAttribute="centerX" id="7jd-M0-bIl"/>
                 <constraint firstItem="JFe-uY-MfW" firstAttribute="centerY" secondItem="HPz-ji-4X9" secondAttribute="centerY" id="Pbo-Mu-Ejw"/>
@@ -148,8 +149,15 @@
                 <outlet property="scrollView" destination="CHy-t5-a1C" id="O3p-gZ-pbG"/>
                 <outlet property="tipsLabel" destination="Ipb-GQ-ogX" id="hhE-IA-iDJ"/>
                 <outlet property="tipsView" destination="5ZD-3I-w9i" id="abq-JC-elS"/>
+                <outletCollection property="gestureRecognizers" destination="9Hf-gR-ezG" appends="YES" id="rvh-zJ-IOZ"/>
             </connections>
             <point key="canvasLocation" x="624" y="-311.24437781109447"/>
         </view>
+        <tapGestureRecognizer id="9Hf-gR-ezG">
+            <connections>
+                <action selector="placeViewTapped:" destination="HPz-ji-4X9" id="oRp-7W-Vm3"/>
+                <outlet property="delegate" destination="HPz-ji-4X9" id="TQy-7D-h1y"/>
+            </connections>
+        </tapGestureRecognizer>
     </objects>
 </document>
